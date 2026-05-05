@@ -49,8 +49,8 @@ section { padding: 72px 24px; }
 .section-title { font-family: "Playfair Display", serif; font-size: clamp(1.6rem, 3vw, 2.3rem); font-weight: 900; color: var(--forest); margin-bottom: 16px; }
 .section-lead { font-size: 0.96rem; color: var(--muted); max-width: 700px; margin-bottom: 44px; }
 #explainer { background: var(--cream); }
-.compare-grid { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0; align-items: stretch; margin-bottom: 40px; min-width: 0; }
-.compare-card { padding: 32px 28px; border-radius: 6px; }
+.compare-grid { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0; align-items: stretch; margin-bottom: 40px; min-width: 0; overflow: hidden; }
+.compare-card { padding: 32px 28px; border-radius: 6px; min-width: 0; word-wrap: break-word; }
 .compare-card.cba { background: #fff; border: 2px solid var(--border); }
 .compare-card.cbo { background: var(--forest); color: #fff; border: 2px solid var(--forest); }
 .compare-vs { display: flex; align-items: center; justify-content: center; width: 60px; font-family: "Playfair Display", serif; font-size: 1.4rem; font-weight: 900; color: var(--gold); }
@@ -155,7 +155,8 @@ footer { background: var(--charcoal); color: rgba(255,255,255,0.55); padding: 36
 footer strong { color: var(--gold); }
 footer a { color: rgba(255,255,255,0.45); }
 @media (max-width: 768px) {
-  .compare-grid { grid-template-columns: 1fr auto 1fr; }
+  .compare-grid { grid-template-columns: 1fr; }
+  .compare-vs { display: none; }
   .meeting-grid { grid-template-columns: 1fr; }
   .form-grid { grid-template-columns: 1fr; }
   .nav-links { display: none; }
@@ -322,9 +323,9 @@ footer a { color: rgba(255,255,255,0.45); }
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:8px;">
 
       <div style="border-left:4px solid var(--gold);padding-left:24px;">
-        <div style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:3px;text-transform:uppercase;color:var(--forest-mid);margin-bottom:10px;">Sponsoring Nonprofit</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:3px;text-transform:uppercase;color:var(--forest-mid);margin-bottom:10px;">Housed Within Young, Gifted &amp; Green</div>
         <h3 style="font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:900;color:var(--forest);margin-bottom:12px;">Mid-South Environmental Justice Center</h3>
-        <p style="font-size:0.88rem;color:var(--muted);line-height:1.7;margin-bottom:12px;">The Mid-South Environmental Justice Center is inspired by the <strong style="color:var(--forest);">Deep South Center for Environmental Justice</strong> in New Orleans, the first environmental justice center in the nation. Like its predecessor, the MSEJC is built on the conviction that frontline communities must have dedicated, permanent institutions that combine legal advocacy, community organizing, education, and research to fight environmental injustice and build community power.</p>
+        <p style="font-size:0.88rem;color:var(--muted);line-height:1.7;margin-bottom:12px;">The Mid-South Environmental Justice Center is housed within <strong style="color:var(--forest);">Young, Gifted &amp; Green</strong>, the sponsoring nonprofit organization. MSEJC is inspired by the <strong style="color:var(--forest);">Deep South Center for Environmental Justice</strong> in New Orleans, the first environmental justice center in the nation. Like its predecessor, the MSEJC is built on the conviction that frontline communities must have dedicated, permanent institutions that combine legal advocacy, community organizing, education, and research to fight environmental injustice and build community power.</p>
         <p style="font-size:0.88rem;color:var(--muted);line-height:1.7;">Operating at the intersection of environmental health, racial justice, and economic equity, the MSEJC centers the voices of communities in the Mid-South who bear the greatest burden of industrial pollution, including the communities of South Memphis that have been fighting xAI's unchecked expansion.</p>
       </div>
 
